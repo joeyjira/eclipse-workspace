@@ -1,0 +1,10 @@
+import java.util.Date;
+
+public class FormatTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.printf("%$s %2$tB %2$te, %2$tY", "Due Date:", new Date());
+	}
+
+}
