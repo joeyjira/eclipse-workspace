@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ForEachTest {
 	public static void main(String[] args)
@@ -11,5 +12,7 @@ public class ForEachTest {
 			element = counter;
 			System.out.println(element);
 		}
+		
+		System.out.println(Arrays.toString(a));
 	}
 }
