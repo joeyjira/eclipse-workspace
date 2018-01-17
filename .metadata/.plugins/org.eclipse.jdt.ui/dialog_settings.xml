@@ -4,7 +4,7 @@
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
-	<item value="/Users/joey/corejava/v1ch02/Welcome" key="org.eclipse.jdt.ui.last.external.project"/>
+	<item value="/Users/joey/eclipse-workspace/JavaChapter3" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="RefactoringWizard.preview">
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
