@@ -2,12 +2,11 @@ import java.time.LocalDate;
 
 class Employee
 {
-	private static int nextId = 1;
+	private static int nextId;
 	
 	private String name;
 	private double salary;
 	private LocalDate hireDay;
-	
 	private int id;
 	
 	public Employee(String n, double s)
