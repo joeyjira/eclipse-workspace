@@ -1,3 +1,4 @@
+import com.jira.corejava.Employee;
 
 public class StaticTest 
 {

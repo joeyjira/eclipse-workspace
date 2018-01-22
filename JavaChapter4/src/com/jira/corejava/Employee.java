@@ -1,7 +1,8 @@
+package com.jira.corejava;
 import java.time.LocalDate;
 import java.util.Random;
 
-class Employee
+public class Employee
 {
 	private static int nextId;
 	

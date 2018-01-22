@@ -1,3 +1,4 @@
+import static java.lang.Math.*;
 
 public class MathTest {
 	public static void main(String[] args)
@@ -6,6 +7,7 @@ public class MathTest {
 		int b = 4;
 		double c = 3.4;
 		double d = 2.8;
-		System.out.print(a % b);
+		int e = (int) pow(a, b);
+		System.out.println(e);
 	}
 }
