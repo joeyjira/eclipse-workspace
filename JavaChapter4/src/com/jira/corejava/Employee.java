@@ -78,4 +78,9 @@ public class Employee
 		double raise = salary * ((100 + percentage) / 100); 
 		salary += raise;
 	}
+	
+	public static int getNextId()
+	{
+		return nextId;
+	}
 }

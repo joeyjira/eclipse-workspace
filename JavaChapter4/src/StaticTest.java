@@ -14,7 +14,6 @@ public class StaticTest
 		// print out information about all Employee objects
 		for (Employee e : staff)
 		{
-			e.setId();
 			System.out.println("name=" + e.getName() + ",id=" + e.getId() + ",salary=" + e.getSalary());
 		}
 		
