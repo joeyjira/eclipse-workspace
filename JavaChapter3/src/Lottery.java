@@ -19,6 +19,8 @@ public class Lottery {
 			lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n - i + 1)).divide(BigInteger.valueOf(i));
 		
 		System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
+		
+		in.close();
 	}
 
 }
