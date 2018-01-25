@@ -20,7 +20,7 @@ public class ManagerTest
 		staff[1] = new Employee("Harry Hacker", 50000, 1989, 10, 1);
 		staff[2] = new Employee("Tommy Tester", 40000, 1990, 3, 15);
 		
-		System.out.println(staff[0] instanceof Manager);
+		System.out.println(staff[0] instanceof Employee);
 		// print out information about all Employee objects
 		for (Employee e : staff)
 		{
