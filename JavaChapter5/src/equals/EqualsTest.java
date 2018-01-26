@@ -1,8 +1,5 @@
 package equals;
 
-import abstractClasses.Employee;
-import inheritance.Manager;
-
 /**
  * This program demonstrates the equals method.
  * @author joey
