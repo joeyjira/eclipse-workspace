@@ -1,5 +1,7 @@
 package equals;
 
+import java.util.*;
+
 /**
  * This program demonstrates the equals method.
  * @author joey
