@@ -1,5 +1,7 @@
 package enums;
 
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class EnumTest 
@@ -14,6 +16,10 @@ public class EnumTest
 		System.out.println("abbreviation=" + size.getAbbreviation());
 		if (size == Size.EXTRA_LARGE)
 			System.out.println("Good job--you paid attention to the _.");
+		
+		boolean b;
+		Class c = Size.class;
+		System.out.println(c);
 	}
 }
 
