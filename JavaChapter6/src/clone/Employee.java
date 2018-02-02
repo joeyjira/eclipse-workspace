@@ -26,4 +26,23 @@ public class Employee implements Cloneable
 		
 		return cloned;
 	}
+	
+	public void setHireDay(int year, int month, int day)
+	{
+		Date newHireDay = new GregorianCalendar(year, month -1, day).getTime();
+		
+		// Example of instance field mutation
+		hireDay.setTime(newHireDay.getTime());
+	}
+	
+	public void raiseSalary(double byPercent)
+	{
+		double raise = salary * byPercent / 100;
+		salary += raise;
+	}
+	
+	public String toString()
+	{
+		return "Employee[name=" + name + ",salary=" + salary + ",hireDay=" + hireDay + "]"; 
+	}
 }
