@@ -3,11 +3,10 @@ import java.time.LocalDate;
 public class Testing {
 	public static void main(String[] args)
 	{
-		LocalDate deadline;
-		deadline = LocalDate.now();
-//		deadline = null;
+		Object deadline;
+		deadline = new String("Hello");
 		
-		System.out.print(deadline.toString());
+		System.out.print(((String)deadline).toLowerCase());
 		
 	}
 }
