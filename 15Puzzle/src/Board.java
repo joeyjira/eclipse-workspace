@@ -3,17 +3,31 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Board 
 {
-	private Tile[][] board = new Tile[4][4];
+	private Tile[][] board;
+	
+	public static Tile[][] getBoard()
+	{
+		this.board = new Board();
+		Tile[] tiles = Board.getTiles();
+		tiles = shuffleTiles(tiles);
+		for (Tile t : tiles)
+		{
+			int row = 0;
+			int column = 0;
+			board[row][column] = t;
+		}
+		return board;
+	}
 	
 	public Board()
 	{
-		
+		board = new Tile[4][4];
 	}
 	
-	public Tile[] getTiles() 
+	public static Tile[] getTiles() 
 	{
 		Tile[] tiles = new Tile[16];
-		for (int i = 1; i <= 15; i++)
+		for (int i = 0; i <= 15; i++)
 		{
 			tiles[i] = new Tile(i);
 		}
@@ -21,7 +35,7 @@ public class Board
 		return tiles;
 	}
 	
-	public Tile[] shuffleTiles(Tile[] tiles)
+	public static Tile[] shuffleTiles(Tile[] tiles)
 	{
 		  Random rnd = ThreadLocalRandom.current();
 		    for (int i = tiles.length - 1; i > 0; i--)
