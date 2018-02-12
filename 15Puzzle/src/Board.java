@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -5,26 +6,34 @@ public class Board
 {
 	private Tile[][] board;
 	
-	public static Tile[][] getBoard()
+	public static Board getBoard(int n)
 	{
-		this.board = new Board();
+		Board gameBoard = new Board(n);
 		Tile[] tiles = Board.getTiles();
-		tiles = shuffleTiles(tiles);
-		for (Tile t : tiles)
+		for (int i = 0; i < tiles.length; i++)
 		{
 			int row = 0;
 			int column = 0;
-			board[row][column] = t;
+			
+			gameBoard.board[row][column] = tiles[i];
+			column++;
+			if (column == 3) break;
+			
+//			if (column == 3)
+//			{
+//				row++;
+//				column = 0;
+//			}
 		}
-		return board;
+		return gameBoard;
 	}
 	
-	public Board()
+	public Board(int size)
 	{
-		board = new Tile[4][4];
+		board = new Tile[size][size];
 	}
 	
-	public static Tile[] getTiles() 
+	private static Tile[] getTiles() 
 	{
 		Tile[] tiles = new Tile[16];
 		for (int i = 0; i <= 15; i++)
@@ -35,7 +44,12 @@ public class Board
 		return tiles;
 	}
 	
-	public static Tile[] shuffleTiles(Tile[] tiles)
+	public Tile[][] showBoard()
+	{
+		return board;
+	}
+	
+	private static Tile[] shuffleTiles(Tile[] tiles)
 	{
 		  Random rnd = ThreadLocalRandom.current();
 		    for (int i = tiles.length - 1; i > 0; i--)
@@ -47,5 +61,11 @@ public class Board
 		      tiles[i] = a;
 		    }
 		return tiles;
+	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println(Arrays.deepToString(Board.getBoard(4).showBoard()));
+//		System.out.println(Arrays.toString(Board.getTiles()));
 	}
 }
