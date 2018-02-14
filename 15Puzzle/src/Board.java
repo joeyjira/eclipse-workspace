@@ -10,20 +10,20 @@ public class Board
 	{
 		Board gameBoard = new Board(n);
 		Tile[] tiles = Board.getTiles();
+		tiles = shuffleTiles(tiles);
+		
+		int row = 0;
+		int column = 0;
 		for (int i = 0; i < tiles.length; i++)
 		{
-			int row = 0;
-			int column = 0;
-			
 			gameBoard.board[row][column] = tiles[i];
 			column++;
-			if (column == 3) break;
 			
-//			if (column == 3)
-//			{
-//				row++;
-//				column = 0;
-//			}
+			if (column == 4)
+			{
+				row++;
+				column = 0;
+			}
 		}
 		return gameBoard;
 	}
@@ -66,6 +66,5 @@ public class Board
 	public static void main(String[] args)
 	{
 		System.out.println(Arrays.deepToString(Board.getBoard(4).showBoard()));
-//		System.out.println(Arrays.toString(Board.getTiles()));
 	}
 }
