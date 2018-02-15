@@ -16,6 +16,7 @@ public class Board
 		int column = 0;
 		for (int i = 0; i < tiles.length; i++)
 		{
+			tiles[i].setPosition(i + 1);
 			gameBoard.board[row][column] = tiles[i];
 			column++;
 			
