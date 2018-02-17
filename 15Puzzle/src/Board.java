@@ -45,9 +45,16 @@ public class Board
 		return tiles;
 	}
 	
-	public Tile[][] showBoard()
+	public void showBoard()
 	{
-		return board;
+		for (Tile[] row : board)
+		{
+			for (Tile tile : row)
+			{
+				System.out.print(" " + tile.getValue() + " ");
+			}
+			System.out.println();
+		}
 	}
 	
 	private static Tile[] shuffleTiles(Tile[] tiles)
@@ -66,6 +73,6 @@ public class Board
 	
 	public static void main(String[] args)
 	{
-		System.out.println(Arrays.deepToString(Board.getBoard(4).showBoard()));
+		Board.getBoard(4).showBoard();
 	}
 }
