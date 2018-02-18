@@ -51,7 +51,14 @@ public class Board
 		{
 			for (Tile tile : row)
 			{
-				System.out.print(" " + tile.getValue() + " ");
+				if (tile.getValue() == 0)
+				{
+					System.out.print("   ");
+				}
+				else 
+				{					
+					System.out.printf(" " + tile.getValue() + " ");
+				}
 			}
 			System.out.println();
 		}
