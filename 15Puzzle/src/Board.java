@@ -5,6 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Board 
 {
 	private Tile[][] board;
+	private int[] emptySpace;
 	
 	public static Board getBoard(int n)
 	{
@@ -16,8 +17,13 @@ public class Board
 		int column = 0;
 		for (int i = 0; i < tiles.length; i++)
 		{
-			tiles[i].setPosition(i + 1);
 			gameBoard.board[row][column] = tiles[i];
+			
+			if (tiles[i].getValue() == 0)
+			{
+				gameBoard.emptySpace = new int[] {row, column};
+			}
+			
 			column++;
 			
 			if (column == 4)
@@ -43,6 +49,12 @@ public class Board
 		}
 		
 		return tiles;
+	}
+	
+	private int[] findEmptySpace()
+	{
+		
+		return emptySpace;
 	}
 	
 	public void showBoard()
@@ -80,6 +92,7 @@ public class Board
 	
 	public static void main(String[] args)
 	{
-		Board.getBoard(4).showBoard();
+		Board board = Board.getBoard(4);
+		System.out.println(Arrays.toString(board.emptySpace));
 	}
 }

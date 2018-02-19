@@ -2,7 +2,6 @@
 public class Tile 
 {
 	private int value;
-	private int position;
 	
 	public Tile(int value)
 	{
@@ -11,16 +10,11 @@ public class Tile
 	
 	public String toString()
 	{
-		return getClass().getName() + "[value=" + value + ", position=" + position + "]";
+		return getClass().getName() + "[value=" + value + "]";
 	}
 	
 	public int getValue()
 	{
 		return this.value;
-	}
-	
-	public void setPosition(int position)
-	{
-		this.position = position;
 	}
 }
