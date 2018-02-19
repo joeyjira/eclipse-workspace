@@ -53,10 +53,14 @@ public class Board
 	
 	private int[] findEmptySpace()
 	{
-		
 		return emptySpace;
 	}
 	
+//	private int[][] possibleTilesToSwap()
+//	{
+//		if ()
+//	}
+//	
 	public void showBoard()
 	{
 		for (Tile[] row : board)
@@ -65,13 +69,15 @@ public class Board
 			{
 				if (tile.getValue() == 0)
 				{
-					System.out.print("   ");
+					System.out.print("");
 				}
 				else 
 				{					
-					System.out.printf(" " + tile.getValue() + " ");
+//					System.out.print(" " + tile.getValue() + " ");
+					System.out.printf("%-10d", tile.getValue());
 				}
 			}
+			System.out.println();
 			System.out.println();
 		}
 	}
@@ -93,6 +99,7 @@ public class Board
 	public static void main(String[] args)
 	{
 		Board board = Board.getBoard(4);
+		board.showBoard();
 		System.out.println(Arrays.toString(board.emptySpace));
 	}
 }
