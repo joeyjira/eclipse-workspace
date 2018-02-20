@@ -51,15 +51,10 @@ public class Board
 		return tiles;
 	}
 	
-	private int[] findEmptySpace()
+	private int[][] possibleTilesToSwap()
 	{
-		return emptySpace;
+		if ()
 	}
-	
-//	private int[][] possibleTilesToSwap()
-//	{
-//		if ()
-//	}
 //	
 	public void showBoard()
 	{
@@ -69,11 +64,10 @@ public class Board
 			{
 				if (tile.getValue() == 0)
 				{
-					System.out.print("");
+					System.out.printf("%-10s", "*");
 				}
 				else 
 				{					
-//					System.out.print(" " + tile.getValue() + " ");
 					System.out.printf("%-10d", tile.getValue());
 				}
 			}
