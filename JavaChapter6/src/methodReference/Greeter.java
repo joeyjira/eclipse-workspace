@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Greeter
 {
-	public void greet()
+	public void greet(ActionEvent event)
 	{
 		System.out.println("Hello, world!");
 	}

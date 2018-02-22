@@ -6,7 +6,8 @@ public class TimedGreeter extends Greeter
 {
 	public void greet()
 	{
-		Timer t = new Timer(1000, x -> super.greet());
+		Greeter hello = new Greeter();
+		Timer t = new Timer(1000, super::greet);
 		t.start();
 	}
 	
