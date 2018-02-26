@@ -2,7 +2,7 @@ package comparablesTest;
 
 import java.util.Arrays;
 
-public class Employee implements Comparable<Employee>
+public class Employee implements Comparable
 {
 	private double salary;
 	
@@ -12,8 +12,9 @@ public class Employee implements Comparable<Employee>
 	}
 	
 	@Override
-	public int compareTo(Employee o) {
-		return (int) (this.salary - o.salary);
+	public int compareTo(Object o) {
+		Employee other = (Employee) o;
+		return (int) (this.salary - other.salary);
 	}
 	
 	public String toString()
@@ -28,6 +29,6 @@ public class Employee implements Comparable<Employee>
 		Arrays.sort(employees);
 		System.out.println(Arrays.deepToString(employees));
 		
-		System.out.println(employees[0] instanceof Comparable);
+		System.out.println(employees instanceof Comparable[]);
 	}
 }
