@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 public class Employee implements Comparable
 {
+	private String name;
 	private double salary;
 	
-	public Employee(double salary)
+	public Employee(String name, double salary)
 	{
+		this.name = name;
 		this.salary = salary;
 	}
 	
@@ -19,14 +21,16 @@ public class Employee implements Comparable
 	
 	public String toString()
 	{
-		return "" + this.salary;
+		return this.getClass().getName() + "[name=" + this.name + ", salary=" + this.salary + "]";
 	}
 	
 	public static void main(String[] args)
 	{
-		Object[] employees = new Employee[] {new Employee(3000), new Employee(1500), new Employee(4000)};
+		Employee[] employees = new Employee[] {new Employee("Joey",3000), 
+				new Employee("Ben", 1500), new Employee("Ho", 4000)};
 		System.out.println(Arrays.deepToString(employees));
-		Arrays.sort(employees);
+//		Arrays.sort(employees);
+		Arrays.sort(employees, (Employee first, Employee second) -> first.name.length() - second.name.length());
 		System.out.println(Arrays.deepToString(employees));
 		
 		System.out.println(employees instanceof Comparable[]);
