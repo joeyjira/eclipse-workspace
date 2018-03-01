@@ -1,43 +1,25 @@
 
 public class AddTwoNumbers 
 {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) 
-    {
-        String firstList = "";
-        String secondList = "";
-        String resultString;
-        
-        ListNode resultNode;
-        
-        ListNode currentNode1 = l1;
-        ListNode currentNode2 = l2;
-        
-        while (currentNode1 != null)
-        {
-            firstList += currentNode1.val;
-            currentNode1 = currentNode1.next;
-        }
-        
-        while (currentNode2 != null)
-        {
-            secondList += currentNode2.val;
-            currentNode2 = currentNode2.next;
-        }
-        
-        resultString = "" + (Integer.parseInt(firstList) + Integer.parseInt(secondList));
-        
-        for (int i = resultString.length() - 1; i >= 0; i--)
-        {
-            int j = Integer.parseInt("" + resultString.charAt(i));
-            resultNode = new ListNode(j);
-            if (i != 0) 
-            {            	
-//            		resultNode = resultNode.next;
-            }
-        }
-        
-        return resultNode;
-    }
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+	    ListNode dummyHead = new ListNode(0);
+	    ListNode p = l1, q = l2, curr = dummyHead;
+	    int carry = 0;
+	    while (p != null || q != null) {
+	        int x = (p != null) ? p.val : 0;
+	        int y = (q != null) ? q.val : 0;
+	        int sum = carry + x + y;
+	        carry = sum / 10;
+	        curr.next = new ListNode(sum % 10);
+	        curr = curr.next;
+	        if (p != null) p = p.next;
+	        if (q != null) q = q.next;
+	    }
+	    if (carry > 0) {
+	        curr.next = new ListNode(carry);
+	    }
+	    return dummyHead.next;
+	}
 }
 
 class ListNode 
