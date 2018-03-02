@@ -51,10 +51,10 @@ public class Board
 		return tiles;
 	}
 	
-	private int[][] possibleTilesToSwap()
-	{
-		if ()
-	}
+//	private int[][] possibleTilesToSwap()
+//	{
+//		if ()
+//	}
 //	
 	public void showBoard()
 	{
