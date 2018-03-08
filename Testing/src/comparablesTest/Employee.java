@@ -24,6 +24,11 @@ public class Employee implements Comparable
 		return this.getClass().getName() + "[name=" + this.name + ", salary=" + this.salary + "]";
 	}
 	
+	public static String interfaceCheck(Comparable o)
+	{
+		return "This is comparable";
+	}
+	
 	public static void main(String[] args)
 	{
 		Employee[] employees = new Employee[] {new Employee("Joey",3000), 
@@ -34,5 +39,6 @@ public class Employee implements Comparable
 		System.out.println(Arrays.deepToString(employees));
 		
 		System.out.println(employees instanceof Comparable[]);
+		System.out.println(Employee.interfaceCheck(employees[0]));
 	}
 }
