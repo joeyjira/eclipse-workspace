@@ -1,33 +1,29 @@
+import java.util.Scanner;
 
 public class BinarySearch 
 {
-	public static int binarySearch(int[] a, int startIndex, int endIndex, int x)
+	public static int binarySearch(int[] array, int left, int right, int target)
 	{
-		int middleIndex = ((endIndex - startIndex) / 2) + startIndex;
-
-		System.out.println("startIndex=" + startIndex + ",endIndex=" + endIndex + ",middleIndex=" + middleIndex);
-		if (endIndex >= 1) 
+		int middle = left + (right - left) / 2;
+		
+		if (right >= left)
 		{
-			if (x == a[middleIndex])
-			{
-				System.out.println("FOUND!");
-				return middleIndex;
-			} 
-			else if (x < a[middleIndex])
-			{
-				return binarySearch(a, 0, middleIndex, x);
-			}
-			else if (x > a[middleIndex])
-			{
-				return binarySearch(a, middleIndex + 1, endIndex, x);
-			}
-		}	
+			if (target == array[middle])
+				return middle;
+			else if (target < array[middle])
+				return binarySearch(array, left, middle - 1, target);
+			else if (target > array[middle])
+				return binarySearch(array, middle + 1, right, target);
+		}
 		return -1;
 	}
 	
 	public static void main(String[] args)
 	{
-		int[] testArray = new int[] {2, 4, 6, 7, 12, 13, 15, 23, 27};
-		System.out.println(BinarySearch.binarySearch(testArray, 0, testArray.length - 1, 27));
+		int[] testArray = new int[] {-10, -7, -6, -3, -1, 0, 2, 4, 6, 7, 12, 13, 15, 23, 27};
+		Scanner in = new Scanner(System.in);
+		int target = in.nextInt();
+		System.out.println(BinarySearch.binarySearch(testArray, 0, testArray.length - 1, target));
+		in.close();
 	}
 }
