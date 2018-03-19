@@ -4,7 +4,7 @@ public class BinarySearch
 {
 	public static int binarySearch(int[] array, int left, int right, int target)
 	{
-		int middle = left + (right - left) / 2;
+		int middle = left + right >>> 1;
 		
 		if (right >= left)
 		{
