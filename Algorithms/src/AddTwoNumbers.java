@@ -20,12 +20,26 @@ public class AddTwoNumbers
 	    }
 	    return dummyHead.next;
 	}
+	
+	public class ListNode 
+	{
+		int val;
+		ListNode next;
+		ListNode(int x) { val = x; }
+	}
+	
+	public static void main(String[] args)
+	{
+		ListNode l1 = new ListNode(2);
+		ListNode l2 = new ListNode(5);
+		l1.next = new ListNode(5);
+		l2.next = new ListNode(0);
+		l1.next.next = new ListNode(4);
+		l2.next.next = new ListNode(7);
+		
+		
+	}
 }
 
-class ListNode 
-{
-	int val;
-	ListNode next;
-	ListNode(int x) { val = x; }
-}
+
  
