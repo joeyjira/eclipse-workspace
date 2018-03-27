@@ -35,8 +35,7 @@ public class AddTwoNumbers
 		l1.next = new ListNode(5);
 		l2.next = new ListNode(0);
 		l1.next.next = new ListNode(4);
-		l2.next.next = new ListNode(7);
-		
+		l2.next.next = new ListNode(7);	
 		
 	}
 }
