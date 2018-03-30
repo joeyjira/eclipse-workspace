@@ -1,4 +1,4 @@
-class OuterClass
+public class OuterClass
 { 
     // static member
     static int outer_x = 10;
@@ -29,7 +29,7 @@ class OuterClass
 }
  
 // Driver class
-public class StaticNestedClassDemo
+class StaticNestedClassDemo
 {
     public static void main(String[] args)
     {

@@ -45,6 +45,6 @@ public class TimeCalculator
 		{
 			totalMinutes += days.get(i).getTotalMinutesWorked();
 		}
-		System.out.print("This week you worked for " + totalMinutes / 60 + " hours " + totalMinutes % 10 + " minutes");
+		System.out.print("This week you worked for " + totalMinutes / 60 + " hours " + totalMinutes % 60  + " minutes");
 	}
 }
