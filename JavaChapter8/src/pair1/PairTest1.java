@@ -25,4 +25,11 @@ class ArrayAlg
 		}
 		return new Pair<>(min, max);
 	}
+	
+	public static <T> Pair<T> getMiddle(T... a)
+	{
+		int middleIdx = a.length / 2;
+		Pair<T> middleEl = new Pair<>(a[middleIdx], a[middleIdx + 1]);
+		return middleEl;
+	}
 }

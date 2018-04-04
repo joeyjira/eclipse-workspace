@@ -1,11 +1,13 @@
 package MyTimer;
 
 import java.util.Date;
+import java.util.logging.Logger;
 
 public class MyTimer 
 {
 	private int delay;
 	private Runnable function;
+	private static final Logger myLogger = Logger.getLogger("com.mycompany.myapp");
 	
 	public MyTimer(int delay, Runnable function)
 	{
@@ -15,6 +17,7 @@ public class MyTimer
 	
 	public void start()
 	{
+		myLogger.entering("MyTimer.MyTimer", "start");
 		long time = new Date().getTime();
 		long nextTime = time + this.delay;
 		boolean tracker = true;
@@ -28,6 +31,7 @@ public class MyTimer
 				nextTime = time + this.delay;
 			}
 		}
+		myLogger.exiting("MyTimer.MyTimer", "start");
 	}
 
 	public static void main(String[] args)

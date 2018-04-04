@@ -1,5 +1,6 @@
 package pair1;
 
+
 public class Pair<T> 
 {
 	private T first;
