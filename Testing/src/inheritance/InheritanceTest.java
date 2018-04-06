@@ -9,7 +9,7 @@ public class InheritanceTest
 		Employee kevin = new Employee("Kevin", 24);
 		
 		Employee[] company = new Employee[] {joey, kevin, michael};
-		company[0].getInfo();
-		((Manager) company[2]).getInfo();
+		company[0].getInfo(2);
+		michael.getInfo(5);
 	}
 }
