@@ -11,7 +11,7 @@ public class Employee
 		this.age = age;
 	}
 	
-	public void getInfo(Object a)
+	public void getInfo(int a)
 	{
 		System.out.println("My name is " + name + ", and I'm " + age + " years old.");
 	}
