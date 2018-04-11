@@ -145,7 +145,7 @@ public class Array<T> implements Iterable<T> {
 //        }
         
         Iterator<String> itr = array.iterator();
-        Array.ArrayIterator arrItr = (Array.ArrayIterator) itr;
+        Array<String>.ArrayIterator arrItr = (Array<String>.ArrayIterator) itr;
         System.out.println(arrItr.getCurrent());
         System.out.println(arrItr.next());
         System.out.println(arrItr.getCurrent());

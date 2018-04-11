@@ -10,8 +10,13 @@ public class Manager extends Employee
 		this.bonus = bonus;
 	}
 	
-	public void getInfo(Object a)
+	public void getInfo()
 	{
 		System.out.println("I am a manager and I have a bonus of " + bonus);
+	}
+	
+	public void getInfo(int a)
+	{
+		System.out.println("I am int getInfo");
 	}
 }
