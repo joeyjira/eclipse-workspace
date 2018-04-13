@@ -11,7 +11,6 @@ public class SetTest
 		
 		try (Scanner in = new Scanner(System.in))
 		{
-			String hello = in.next();
 			while (in.hasNext())
 			{
 				String word = in.next();
@@ -20,13 +19,12 @@ public class SetTest
 				callTime = System.currentTimeMillis() - callTime;
 				totalTime += callTime;
 			}
-			System.out.println(hello);
 		}
-		
+
 		Iterator<String> iter = words.iterator();
 		for (int i = 1; i <= 20 && iter.hasNext(); i++)
 			System.out.println(iter.next());
 		System.out.println(". . .");
-		System.out.println(words.size() + " distince words. " + totalTime + " milliseconds.");
+		System.out.println(words.size() + " distinct words. " + totalTime + " milliseconds.");
 	}
 }
