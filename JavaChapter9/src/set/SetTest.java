@@ -6,6 +6,7 @@ public class SetTest
 {
 	public static void main(String[] args)
 	{
+		System.out.println("Begin!");
 		Set<String> words = new HashSet<>();
 		long totalTime = 0;
 		

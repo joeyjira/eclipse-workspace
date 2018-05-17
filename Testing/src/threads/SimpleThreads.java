@@ -61,7 +61,7 @@ public class SimpleThreads {
 			// Wait maximum of 1 second
 			// for MessageLoop thread
 			// to finish.
-			t.join(500);
+			t.join(1000);
 			if ((System.currentTimeMillis() - startTime) > patience && t.isAlive()) {
 				threadMessage("Tired of waiting!");
 				t.interrupt();
@@ -71,5 +71,6 @@ public class SimpleThreads {
 		}
 		
 		threadMessage("Finally!");
+		threadMessage("Do\bne!");
 	}
 }

@@ -1,39 +1,17 @@
 
 public class MyMergeSort 
 {
-	public static int[] sort(int[] arr, int l, int r)
+	public <T extends Comparable> void sort(Comparable<T>[] array, int left, int right) 
 	{
-		if (l < r)
-		{
-			int m = l + r >>> 1;
-			
-			sort(arr, l, m);
-			sort(arr, m + 1, r);
-			
-			merge(arr, l, m, r);
-		}
-		return arr;
+		int middle = array.length >> 1;
+		
+		sort(array, left, middle);
+		sort(array, middle + 1, right);
 	}
 	
-	private static void merge(int[] arr, int l, int m, int r)
+	public <T extends Comparable> Comparable<T>[]   merge(Comparable<T> left, Comparable<T> right)
 	{
-		int leftLength = m - l + 1;
-		int rightLength = r - m;
-		
-		int[] leftTemp = new int[leftLength];
-		int[] rightTemp = new int[rightLength];
-		
-		for (int i = 0; i < leftLength; i++)
-			leftTemp[i] = arr[l + i];
-		for (int j = 0; j < rightLength; j++)
-			rightTemp[j] = arr[m + 1 + j];
-		
-		int i = 0, j = 0;
-		
-		int k = l;
-		while (i < leftLength && j < rightLength)
-		{
-			
-		}
+		Integer[] integers = new Integer[] {1, 2, 3, 4, 5};
+		return integers;
 	}
 }
